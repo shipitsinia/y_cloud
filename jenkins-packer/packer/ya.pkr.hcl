@@ -7,7 +7,7 @@ source "yandex" "ubuntu-nginx" {
   image_description   = "my custom ubuntu with nginx"
   image_family        = "ubuntu-2004-lts"
   image_name          = "my-ubuntu-nginx"
-  subnet_id           = "{{env `YC_SUBNET_ID`}}"
+  subnet_id           = "e9bo8upmhdf8ufv28ina"
   disk_type           = "network-ssd"
   zone                = "ru-central1-a"
 }
