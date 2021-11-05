@@ -8,7 +8,7 @@ pipeline {
         PACKER_SH = '/opt/yandex-packer/packer build -color=false'
     }
     stages {
-	    stage('Role-Based') {
+	stage('Role-Based') {
             steps {
                 parallel(
                     nginx: {
