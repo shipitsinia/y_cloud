@@ -1,16 +1,15 @@
 pipeline {
     agent any
     environment {
-        YC_ACCOUNT_KEY_FILE = credentials('YC_ACCOUNT_KEY_FILE')
-        YC_FOLDER_ID = credentials('YC_FOLDER_ID')
-        YC_SUBNET_ID = credentials('YC_SUBNET_ID')
+        aws_access_key = credentials('aws_access_key')
+        aws_secret_key = credentials('aws_secret_key')
 
         PACKER_SH = '/opt/yandex-packer/packer build -color=false'
     }
     stages {
-        stage('VM Yandex') {
+        stage('VM AWS') {
             steps {
-                sh label: '', script: "${env.PACKER_SH} ./jenkins-packer/packer/base.json"
+                sh label: '', script: "${env.PACKER_SH} ./jenkins-packer/packer/aws.json"
             }
         }
     }
