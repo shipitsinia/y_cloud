@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('VM Yandex') {
             steps {
-                sh label: '', script: './jenkins-packer/packer/ya.pkr.hcl ${YC_TOKEN} '
+                sh label: '', script: "${env.PACKER_SH} ./jenkins-packer/packer/base.json"
             }
         }
     }
