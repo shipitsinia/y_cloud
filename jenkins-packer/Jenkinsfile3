@@ -17,8 +17,8 @@ pipeline {
                     django: {
                         sh label: '', script: "${env.PACKER_SH} ./jenkins-packer/packer/django.json" 
                     }
-                } 
-            )
+                ) 
+            }
         }
     }    
 }
