@@ -1,6 +1,6 @@
 source "yandex" "ubuntu-nginx" {
   token               = "{{env `YC_TOKEN`}}"
-  folder_id           = "{{env `YC_FOLDER_ID`}}"
+  folder_id           = "b1gni4ll5qc0871h4334"
   source_image_family = "ubuntu-2004-lts"
   ssh_username        = "ubuntu"
   use_ipv4_nat        = "true"
