@@ -22,18 +22,5 @@
 
       "use_ipv4_nat": true
     }
-  ],
-  "provisioners": [
-    {
-      "type": "shell",
-      "inline": [
-        "echo 'kernel update'",
-        "until ping -c1 mirror.yandex.ru &>/dev/null; do :; done",
-        "sudo apt-get update -y",
-        "sleep 10",
-        "echo changed",
-	"export DEBIAN_FRONTEND=noninteractive"
-     ]
-    }
   ]
-}
+  
