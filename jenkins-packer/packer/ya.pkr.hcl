@@ -1,5 +1,5 @@
 source "yandex" "ubuntu-nginx" {
-  token               = "env `YC_TOKEN`"
+  token               = "${YC_TOKEN}"
   folder_id           = "env `YC_FOLDER_ID`"
   source_image_family = "ubuntu-2004-lts"
   ssh_username        = "ubuntu"
