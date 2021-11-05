@@ -7,18 +7,18 @@ pipeline {
 
         PACKER_SH = '/opt/yandex-packer/packer build -color=false'
     }
-        stage('Role-Based') {
-            steps {
-                parallel(
-                    nginx: {
-                        sh label: '', script: "${env.PACKER_SH} ./jenkins-packer/packer/nginx.json"
-                    },
-                    django: {
-                        sh label: '', script: "${env.PACKER_SH} ./jenkins-packer/packer/django.json" 
-                    }
-                )
-            }
-        }    
+    stage('Role-Based') {
+        steps {
+            parallel(
+                nginx: {
+                    sh label: '', script: "${env.PACKER_SH} ./jenkins-packer/packer/nginx.json"
+                },
+                django: {
+                    sh label: '', script: "${env.PACKER_SH} ./jenkins-packer/packer/django.json" 
+                }
+            )
+        }
+     }    
  }
 
 
