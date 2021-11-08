@@ -14,7 +14,7 @@
 
       "image_name":   "debian-10",
       "image_family": "debian-10",
-      "image_description": "Yet another debian build 2",
+      "image_description": "Debian build for NTC EES IT",
 
       "source_image_family": "debian-10",
       "disk_type":           "network-nvme",
