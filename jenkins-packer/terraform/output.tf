@@ -12,7 +12,6 @@ output "subnet_ids" {
   value = "${local.subnet_ids}"
 }
 
-
 output "folder_id" {
   value = "${var.folder_id}"
 }
